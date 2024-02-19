@@ -47,7 +47,7 @@ void Stack::push(int x)
 int Stack::pop()
 {
 
-    cout<<peek()<<endl;
+    cout<<peek()<<"\n";
 
     return arr[top--];//peek를 출력 후 top을 삭제.
 }
@@ -70,6 +70,8 @@ bool Stack::isFull(){
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     Stack stack;
     string command;
     int num;
@@ -87,7 +89,7 @@ int main()
                     cout<<-1<<"\n";
                 }
                 else{
-                stack.pop();
+                    stack.pop();
                 }
             }
             else if(command =="top"){
@@ -106,7 +108,7 @@ int main()
             }
         }
         catch(const exception& e){
-            cerr<<e.what()<<endl;
+            cerr<<e.what()<<"\n";
             }
     }
 }
